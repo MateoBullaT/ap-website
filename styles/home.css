@@ -9,11 +9,11 @@
     --blue: #134e9c;
     --marine-blue: #009fe3;
     --yellow: #fcd11c;
-    --dark-yellow: #f9b233;
+    --dark-yellow: #f39b23;
     --dark-silver: #404040;
 }
 
-p,a{
+p,a, span{
     font-family: 'Open Sans', sans-serif;
     color: var(--dark-silver);
     text-decoration: none;
@@ -84,6 +84,26 @@ button, .btn1, .btn2{
     top: 2px;
   }
 
+  .span--background{
+      font-size: 5rem;
+      font-weight: 800;
+      opacity: .1;
+      position: absolute;
+  }
+
+  html::-webkit-scrollbar {
+    width: .5rem;
+  }
+  
+  html::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  
+  html::-webkit-scrollbar-thumb {
+    background: linear-gradient(45deg, #134e9c9d, #86b4f09a);
+    border-radius: 5rem;
+  }
+
 
 
 
@@ -101,6 +121,7 @@ button, .btn1, .btn2{
   .header__navbar{
       width: 100%;
       height: 4.5rem;
+      background: rgba(255, 255, 255, 0.945);
       border-radius: 0 0 10px 10px;
       box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
       position: fixed;
@@ -214,7 +235,7 @@ button, .btn1, .btn2{
 
 /* ABOUT US */
 .about-us{
-    padding: 0 1rem 2% 0;
+    padding: 0 1rem 5rem 0;
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
@@ -222,6 +243,7 @@ button, .btn1, .btn2{
     position: relative;
     align-items: center;
     margin-top: 4.5rem;
+    border-bottom: 1px solid #000;
 }
 
 .about__carrousel{
@@ -230,15 +252,35 @@ button, .btn1, .btn2{
     position: relative;
     height: 80vh;
     border-radius: 10px 0 10px 0;
+    overflow: hidden;
+}
+
+.about__carrousel img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
 }
 
 .about__carrousel--caption{
-    background: var(--blue);
-    position: absolute;
+    background: rgba(19, 78, 156, 0.521);
+    background: linear-gradient(158deg, rgba(19, 78, 156, 0.486) 0%, rgba(0, 159, 227, 0.486rgba(243, 156, 35, 0.473)5,35,1) 100%);    position: absolute;
+    backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
     width: 100%;
     bottom: 0;
     border-radius: 10px 0 10px 0;
-    padding: 1.25rem .25rem;
+    padding: 1.25rem .45rem;
+}
+
+.about__carrousel--caption h4{
+    color: #fff;
+    font-weight: 400;
+}
+
+.about__carrousel--caption span{
+    font-size: .75rem;
+    color: #fff;
+    font-weight: 400;
 }
 
 .about__text{
@@ -271,7 +313,50 @@ button, .btn1, .btn2{
 }
 
 .rrss__icon{
-    margin: 1.5rem 0;
+    margin: 3.5rem 0;
+    text-align: center;
+}
+
+.rrss__icon a i{
+    font-size: 2rem;
+    color: #7575753a;
+    text-shadow: 4px 4px 6px rgba(150, 150, 150, 0.15);
+    transition: all .5s;
+} 
+
+.fa-instagram:hover{
+    background: -webkit-linear-gradient(#5851DB,  #C13584);
+    transition-delay: .3s;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.fa-facebook-square:hover{
+    background: -webkit-linear-gradient(#4267B2,  #082ccc);
+    transition-delay: .3s;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.fa-tiktok:hover{
+    background: -webkit-linear-gradient(#00f2ea, #000000);
+    transition-delay: .3s;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.fa-whatsapp:hover{
+    background: -webkit-linear-gradient(#32ec0d,  #347002);
+    transition-delay: .3s;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.fa-youtube:hover{
+    background: -webkit-linear-gradient(#ff0404,  #7e0000);
+    transition-delay: .3s;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 
@@ -334,6 +419,11 @@ button, .btn1, .btn2{
 
 
     /* MENU HEADER */
+    .header__navbar{
+        margin-top: -6.5rem;
+    }
+    
+    
     .toggle{
         position: fixed;
         display: grid;
@@ -341,6 +431,7 @@ button, .btn1, .btn2{
     }
 
     .navbar{
+        transition: all .5s;
         display: flex;
         position: fixed;
         z-index: 10000;
@@ -352,6 +443,11 @@ button, .btn1, .btn2{
         -webkit-backdrop-filter: blur(10px);
         box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
         transform: translateX(-100%);
+    }
+
+    .navbar--active{
+        transition: all .5s;
+        transform: translateX(0);
     }
 
     .nav--logo{
@@ -368,16 +464,43 @@ button, .btn1, .btn2{
 
 
     /* ABOUT US */
+    .about-us{
+        display: block;
+        margin-top: 6.5rem;
+    }
 
+    .about__carrousel{
+        width: 70%;
+        margin: auto;
+    }
+
+    .about__text{
+        margin: auto;
+        width: 100%;
+        display: grid;
+        place-items: center;
+    }
+
+    .about__h1{
+        line-height: 80%;
+        margin: 3rem 0;
+        text-align: center;
+    }
+
+    .about__p{
+        text-align: center;
+    }
 
     .about__rrss{
-        bottom: -3rem;
+        bottom: -4.5rem;
         width: 100%;
         margin: auto;
+        z-index: 5000;
     }
 
     .rrss__ul{
         display: flex;
+        margin: auto;
         width: 90%;
         justify-content: space-around;
         align-items: center;
