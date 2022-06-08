@@ -98,7 +98,7 @@ h2{
   }
 
   .span--background{
-      font-size: 5rem;
+      font-size: 3.6rem;
       font-weight: 800;
       opacity: .1;
       position: absolute;
@@ -139,12 +139,13 @@ h2{
       border-radius: 0 0 10px 10px;
       box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
       position: fixed;
-      z-index: 5000;
+      z-index: 1000000;
       margin-top: -4.5rem;
   }
 
   .toggle{
     position: absolute;
+    cursor: pointer;
     z-index: 1000000;
     width: 70px;
     height: 70px;
@@ -404,7 +405,7 @@ h2{
 }
 
 .services__container{
-    width: 100%;
+    width: 90%;
     margin: 5.5rem 0;
     display: flex;
     justify-content: space-between;
@@ -451,9 +452,70 @@ h2{
 }
 
 .services--span{
-    bottom: -3rem;
+    bottom: 0;
 }
 
+
+
+/* AP TEAM */
+.ap__team{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    position: relative;
+    padding: 5rem 0;
+}
+
+.ap__team__text{
+    width: 40%;
+    display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+}
+
+
+.ap__team__carrousel{
+    position:relative;
+    width: 40%;
+    display: flex;
+    justify-content: center;
+}
+
+.ap_team--card{
+    position: relative;
+    
+}
+
+.background--circle{
+    position: absolute;
+    z-index: -1;
+    left: 2rem;
+    bottom: 1.25rem;
+    width: 20rem;
+    height: 20rem;
+    border-radius: 100%;
+    background: repeating-linear-gradient(to right, #5961d6 0%, #134e9c 100%);
+}
+
+.ap__team--description{
+    background: rgba(255, 255, 255, 0.87);
+    position: absolute;
+    right: 0;
+    top: 50%;
+    z-index: 2000;
+    border-radius: 10px;
+    padding: 1rem;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 4px 12px;
+}
+
+.ap__team--description h4{
+    color: var(--blue);
+}
+   
+.team--span{
+    right: 0;
+    top: 0;
+}
 
 
 
@@ -562,6 +624,7 @@ h2{
 
     .about__carrousel{
         width: 70%;
+        height: 25rem;
         margin: auto;
     }
 
@@ -574,8 +637,8 @@ h2{
 
     .about__h1{
         line-height: 80%;
+        font-size: 4rem;
         margin: 3rem 0;
-        text-align: center;
     }
 
     .about__p{
@@ -596,4 +659,35 @@ h2{
         justify-content: space-around;
         align-items: center;
     }
+
+
+    /* SERVICES */
+    .services__cta{
+        margin: 6rem 0;
+    }
+
+
+
+    /* TEAM */
+    .ap__team{
+        display: grid;
+        place-items: center;
+    }
+
+    .ap__team__text{
+        width: 90%;
+        height: 100%;
+        margin: 3rem 0;
+    }
+
+    .ap__team--p{
+        margin: 2rem 0;
+    }
+
+    .ap__team__carrousel{
+        width: 90%;
+        margin: 3rem 0;
+    }
+
+
 }
