@@ -31,7 +31,7 @@ section {
     padding: 2rem 3%;
 }
 
-button, .btn1, .btn2{
+button, .btn1, .btn2, .btn3{
     border-radius: 5px;
     border: none;
     padding: .75rem 1.5rem;
@@ -97,12 +97,24 @@ h2{
     top: 2px;
   }
 
+.btn3{
+    border: 2px solid #fff;
+    color: #fff;
+}
+
+.btn3:hover{
+    opacity: .75;
+    transition: all .6s ;
+}
+
   .span--background{
       font-size: 3.6rem;
       font-weight: 800;
       opacity: .1;
       position: absolute;
       z-index: 1;
+      -webkit-user-select: none;
+      user-select: none;
   }
 
   html::-webkit-scrollbar {
@@ -267,6 +279,8 @@ h2{
     height: 80vh;
     border-radius: 10px 0 10px 0;
     overflow: hidden;
+    -webkit-user-select: none;
+      user-select: none;
 }
 
 .about__carrousel img{
@@ -336,6 +350,8 @@ h2{
     color: #7575753a;
     text-shadow: 4px 4px 6px rgba(150, 150, 150, 0.15);
     transition: all .5s;
+    -webkit-user-select: none;
+      user-select: none;
 } 
 
 .fa-instagram:hover{
@@ -521,6 +537,156 @@ h2{
 
 
 
+/* RESOURCES */
+.resources{
+    background:rgb(247, 247, 247);
+    position: relative;
+}
+
+.resources--h2{
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.resources__container{
+    display: grid;
+    gap:2rem;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-areas: "event resource1"
+                          "event resource2"
+                          "event resource3";
+    max-height: 80rem;
+}
+
+.event__container{
+    box-shadow: rgba(0, 0, 0, 0.5) 0px 4px 12px;
+    grid-area: event;
+    background: var(--marine-blue);
+    padding: 2rem;
+    border-radius: 10px;
+}
+
+.event--img{
+    width: 100%;
+    height: 30%;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.event--img img{
+    width: 100%;
+    object-fit: cover;
+    -webkit-user-select: none;
+      user-select: none;
+}
+
+.event__container h4{
+    color: #fff;
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+.event--info{
+    display: flex;
+    justify-content: space-between;
+    height: 40%;
+}
+
+.event--details p,
+.event--resume p{
+    color: #fff;
+    font-size: 1rem;
+}
+
+.event--resume,
+.event--details{
+    width: 50%;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+
+.event--details i{
+    color: #fff;
+}
+
+.resource__card{
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 4px 12px;
+    padding: .75rem;
+    max-height: 10rem;
+    border-radius: 10px;
+    border: 1px solid var(--dark-yellow);
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+}
+
+.resource--1{
+    grid-area: resource1;
+}
+.resource--2{
+    grid-area: resource2;
+}
+resource--3{
+    grid-area: resource3;
+}
+
+.resource--text{
+    margin: auto;
+}
+
+.resource--text i{
+    position: absolute;
+    top: .5rem;
+    left: .5rem;
+    font-size: 1.75rem;
+    background: linear-gradient(to right, var(--blue) 0%, var(--marine-blue) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.resource--text h5{
+    width: 70%;
+    line-height: 80%;
+    color: var(--dark-yellow);
+    font-size: 2rem;
+    margin-bottom: .25rem;
+}
+
+.btn--resources{
+    text-decoration: underline;
+}
+
+.btn--resources:hover{
+    opacity: .85;
+    transition: all .5s;
+}
+
+.resources--img{
+    width: 30%;
+    height: 100%;
+    object-fit: cover;
+    overflow: hidden;
+    border-radius: 10px 10px 10px 0;
+}
+
+.resources--img img{
+    height: 100%;
+    object-fit: cover;
+}
+
+.span--resources{
+    top: 0;
+    left: 0;
+}
+
+
+
+
+
 
 
 
@@ -687,6 +853,23 @@ h2{
     .ap__team__carrousel{
         width: 90%;
         margin: 3rem 0;
+    }
+
+
+    /* RESOURCES */
+
+    .resources__container{
+        grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    grid-template-areas: "event"
+                          "resource1"
+                          "resource2"
+                          "resource3";
+    }
+
+    .resource--text{
+        width: 70%;
+        margin-left: 1rem;
     }
 
 
