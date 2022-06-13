@@ -13,7 +13,7 @@
     --dark-silver: #404040;
 }
 
-p,a, span{
+p,a, span, label{
     font-family: 'Open Sans', sans-serif;
     color: var(--dark-silver);
     text-decoration: none;
@@ -23,7 +23,7 @@ p{
     font-size: 1.15rem;
 }
 
-h1,h2,h3,h4,h5,button{
+h1,h2,h3,h4,h5, h6,button, input, textarea{
     font-family: 'Poppins', sans-serif;
 }
 
@@ -687,6 +687,258 @@ resource--3{
 
 
 
+/* TESTIMONIES */
+.clients{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    align-items: center;
+    position: relative;
+    min-height: 20rem;
+}
+
+.clients__text{
+    width: 40%;
+}
+
+.clients__carrousel{
+    width: 50%;
+    display: flex;
+    align-items: center;
+}
+
+.clients__card{
+    padding: .5rem;
+    background: #fff;
+    height: 10rem;
+    box-shadow: rgba(0, 0, 0, 0.14) 0px 4px 12px;
+    border-radius: 10px;
+    position: relative;
+}
+
+.client--img{
+    position: absolute;
+    background-color: #fff;
+    border-radius: 100%;
+    width: 4.5rem;
+    height: 4.5rem;
+    border: 2px solid var(--dark-yellow);
+    top: -2rem;
+    left: -2rem;
+}
+
+.client--p{
+    margin-top: 2.5rem;
+}
+
+.client--name{
+    color: var(--blue);
+}
+
+.fa-angle-right,
+.fa-angle-left{
+    color: var(--blue);
+    font-size: 2rem;
+    margin: 0 1rem;
+    cursor: pointer;
+}
+
+.clients--span{
+    z-index: -1;
+    left: 0;
+    bottom: 0;
+}
+
+
+
+/* CONTACT FORM */
+.form{
+    background:rgb(247, 247, 247);
+    width: 100%;
+}
+
+.form h2{
+    text-align: center;
+}
+
+.contact__form{
+    width: 100%;
+    display: grid;
+    margin: 2rem auto;
+    place-items: center;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    grid-template-areas: "name phone"
+                         "email email"
+                         "msg msg"
+                         "checkbox checkbox"
+                         "submit submit";
+}
+
+.form--section label{
+    display: block;
+    margin-bottom: .35rem;
+}
+
+.form--section input,
+.form--section textarea{
+    border: 2px solid var(--marine-blue);
+    border-radius: 5px;
+    padding: .25rem;
+    transition: .3s ease all;
+}
+
+.form--section input:focus,
+.form--section textarea:focus {
+	border: 2px solid #0075FF;
+	outline: none;
+	box-shadow: 3px 0px 30px rgba(163,163,163, 0.25);
+}
+
+.form--name{
+    grid-area: name;
+    width: 80%;
+}
+
+.form--name input,
+.form--phone input,
+.form--email input{
+    width: 100%;
+}
+
+.form--phone{
+    grid-area: phone;
+        width: 80%;
+
+}
+
+.form--email{
+    grid-area: email;
+    width: 90%;
+}
+
+
+.form--msg{
+    grid-area: msg;
+    width: 90%;
+    min-height: 6rem;
+    max-height: 8rem;
+}
+
+.form--msg textarea{
+    width: 100%;
+    min-height: 8rem;
+    max-height: 8.5rem;
+}
+
+.form--checkbox{
+    grid-area: checkbox;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.form--checkbox input{
+    margin-right: 1rem;
+      
+}
+
+.form--checkbox input:checked{
+    box-shadow: 3px 0px 30px rgba(163,163,163, 0.25);
+      
+}
+
+
+.form--submit{
+    grid-area: submit;
+    display: grid;
+    place-items: center;
+}
+
+
+
+
+
+/* FOOTER */
+.footer__page{
+    padding: .75rem;
+    display: flex;
+    width: 100%;
+    min-height: 20rem;
+    border-top: 2px solid var(--dark-yellow);
+    display: grid;
+    place-items: center;
+}
+
+.main--footer{
+    text-align: center;
+}
+
+.main--footer a{
+    font-size: .8rem;
+    margin: 0 .25rem;
+}
+
+.main--footer a:hover{
+    text-decoration: underline;
+    opacity: .6;
+}
+
+.section--footer{
+    border-top: 2px solid rgba(206, 206, 206, 0.514);
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.copyright{
+    width: 40%;
+    text-align: center;
+}
+
+
+
+.footer--rrss{
+    display: flex;
+    width: 30%;
+}
+
+.footer--rrss a i{
+    margin: 0 .4rem;
+    font-size: 1.5rem;
+    transition: ease .4s all;
+}
+
+.footer--rrss a i:hover{
+    opacity: .5;
+    transition: ease .4s all;
+}
+
+.menu--footer ul{
+    display: flex;
+    list-style: none;
+    width: 40%;
+}
+
+.menu--footer ul li a{
+    font-size: .85rem;
+    margin: 0 .25rem;
+    text-align: center;
+}
+
+.menu--footer ul li a:hover{
+    opacity: .5;
+}
+
+
+
+
+
+
+
+
+
 
 
 
@@ -872,5 +1124,56 @@ resource--3{
         margin-left: 1rem;
     }
 
+
+    /* TESTIMONIES */
+    .clients__text{
+        width: 100%;
+        margin-bottom: 5rem;
+    }
+
+    .clients--h2{
+        text-align: center;
+    }
+
+    .clients__carrousel{
+        width: 100%;
+    }
+
+
+    /* CONTACT FORM  */
+    .form h2{
+        font-size: 2.75rem;
+    }
+
+
+
+    /* FOOTER */
+    .section--footer{
+        display: block;
+        margin: auto;
+        text-align: center;
+    }
+
+    .footer--rrss{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        margin: 1rem 0;
+    }
+
+
+    .copyright{
+        margin: auto;
+    }
+
+    .menu--footer{
+        width: 100%;
+        margin: 1rem 0;
+    }
+
+    .menu--footer ul{
+        text-align: center;
+        margin: auto;
+    }
 
 }
